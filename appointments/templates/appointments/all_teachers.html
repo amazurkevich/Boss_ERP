@@ -1,0 +1,29 @@
+<p>Hello! it's all_teachers.html page</p>
+
+{% extends 'base.html' %}
+{% block title %} All teachers {% endblock title %}
+{% block content %}
+    <div class="container my-5">
+      <h1>All teachers view page!</h1>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">hourly_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in teachers %}
+    <tr>
+      {% for j in i %}
+      <td>{{ j }}</td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
